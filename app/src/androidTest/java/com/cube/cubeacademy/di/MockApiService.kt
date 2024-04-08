@@ -9,10 +9,10 @@ class MockApiService : ApiService {
 	override suspend fun getAllNominations(): DataWrapper<List<Nomination>> {
 		return DataWrapper(
 			listOf(
-				Nomination("1", "1", "reason", "process", "2023-10-11", "2023-11-11"),
-				Nomination("2", "2", "reason", "process", "2023-10-11", "2023-11-11"),
-				Nomination("1", "3", "reason", "process", "2023-10-11", "2023-11-11"),
-				Nomination("2", "4", "reason", "process", "2023-10-11", "2023-11-11"),
+				Nomination("1", "1", "name","reason", "process", "2023-10-11", "2023-11-11"),
+				Nomination("2", "2", "name","reason", "process", "2023-10-11", "2023-11-11"),
+				Nomination("1", "3", "name","reason", "process", "2023-10-11", "2023-11-11"),
+				Nomination("2", "4", "name","reason", "process", "2023-10-11", "2023-11-11"),
 			)
 		)
 	}
@@ -29,7 +29,7 @@ class MockApiService : ApiService {
 
 	override suspend fun createNomination(nomineeId: String, reason: String, process: String): DataWrapper<Nomination> {
 		return DataWrapper(
-			Nomination("3", nomineeId, reason, process, "2023-10-11", "2023-11-12")
+			Nomination(nominationId ="3", nomineeId= nomineeId,nomineeName = "", reason=reason, process = process, dateSubmitted = "2023-10-11", closingDate = "2023-11-12")
 		)
 	}
 }

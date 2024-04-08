@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="spinner_dropdown_height">150dp</dimen> <!-- Adjust the height as per your requirement -->
+
+</resources>

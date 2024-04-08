@@ -15,4 +15,22 @@
 	<string name="nomination_submitted">Nomination Submitted</string>
 	<string name="back_to_home">Back to home</string>
 	<string name="nomination_submitted_body">Thank you for taking the time to fill out this form! Why not nominate another cube?</string>
+
+	<string name="cube_names_spinner_title">Cube’s name</string>
+	<string name="reasoning_title">Reasoning</string>
+
+	<string name="very_unfair">Very Unfair</string>
+	<string name="unfair">Unfair</string>
+	<string name="not_sure">Not Sure</string>
+	<string name="fair">Fair</string>
+	<string name="very_fair">Very Fair</string>
+	<string name="select_option">Select Option</string>
+
+	<string name="internet_not_available">Internet not available</string>
+
+
+
+
+
+
 </resources>

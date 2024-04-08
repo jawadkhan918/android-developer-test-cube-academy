@@ -72,4 +72,50 @@
 		<item name="android:elevation">6dp</item>
 		<item name="elevation">6dp</item>
 	</style>
+
+
+	<style name="SpinnerTheme">
+		<item name="android:background">@drawable/spinner_icon</item>
+	</style>
+
+	<style name="reasoning_edit_text_style">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:padding">10dp</item>
+		<item name="android:gravity">top</item>
+		<item name="android:inputType">textMultiLine</item>
+		<item name="android:scrollbars">vertical</item>
+		<item name="android:hint">Enter text</item>
+		<item name="android:minLines">7</item>
+		<item name="android:maxLines">7</item>
+		<item name="android:background">@drawable/reasoning_edittext_background</item>
+		<item name="android:fontFamily">@font/anonymous_pro_regular</item>
+	</style>
+
+
+	<style name="custom_radio_button_style">
+		<item name="android:fontFamily">@font/poppins_bold</item>
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:button">@null</item>
+		<item name="android:drawableRight">?android:attr/listChoiceIndicatorSingle</item>
+		<item name="android:background">@drawable/radio_button_border</item>
+		<item name="android:drawablePadding">15dp</item>
+		<item name="android:layout_marginTop">15dp</item>
+		<item name="android:layoutDirection">rtl</item>
+		<item name="android:paddingStart">15dp</item>
+		<item name="android:paddingEnd">15dp</item>
+		<item name="android:paddingTop">10dp</item>
+		<item name="android:paddingBottom">10dp</item>
+		<item name="android:textSize">14sp</item>
+	</style>
+
+	<style name="progress_bar" parent="Widget.AppCompat.ProgressBar">
+		<item name="android:layout_centerInParent">true</item>
+		<item name="android:elevation">10dp</item>
+		<item name="android:indeterminate">true</item>
+		<item name="android:indeterminateTint">@android:color/white</item>
+		<item name="android:layout_gravity">center</item>
+	</style>
+
 </resources>

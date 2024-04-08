@@ -24,6 +24,7 @@
 	</androidx.appcompat.widget.Toolbar>
 
 	<androidx.core.widget.NestedScrollView
+		android:id="@+id/main_scroll_view"
 		android:layout_width="match_parent"
 		android:layout_height="0dp"
 		android:layout_weight="1">
@@ -62,8 +63,37 @@
 					android:layout_marginTop="8dp"
 					android:text="@string/id_like_to_nominate_subtitle"
 					android:textColor="@color/black" />
+				<LinearLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="15dp"
+					android:orientation="horizontal"
+					>
 
-				<!-- TODO: Add the drop down selector of nominees -->
+					<ImageView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="6dp"
+						android:src="@drawable/mandatory_icon"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						style="@style/bold_headline_small"
+						android:text="@string/cube_names_spinner_title"
+						android:textColor="@color/black" />
+				</LinearLayout>
+
+				<Spinner
+					android:id="@+id/cube_names"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:dropDownVerticalOffset="50dp"
+					android:spinnerMode="dropdown"
+					android:overlapAnchor="false"
+					android:layout_marginTop="8dp"
+					style="@style/SpinnerTheme"
+					/>
 
 				<View
 					android:layout_width="match_parent"
@@ -86,9 +116,42 @@
 					android:layout_marginTop="8dp"
 					android:text="@string/reason_subtitle"
 					android:textColor="@color/black" />
-
 				<!-- TODO: Add the Edit text for the reason -->
 
+				<LinearLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="8dp"
+					android:orientation="horizontal"
+					>
+
+					<ImageView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="6dp"
+						android:src="@drawable/mandatory_icon"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						style="@style/bold_headline_small"
+						android:text="@string/reasoning_title"
+						android:textColor="@color/black" />
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="8dp"
+					android:focusable="false"
+					android:focusableInTouchMode="true"
+					android:orientation="vertical">
+
+				<EditText
+					android:id="@+id/reasoning"
+					style="@style/reasoning_edit_text_style" />
+
+				</LinearLayout>
 				<View
 					android:layout_width="match_parent"
 					android:layout_height="1dp"
@@ -112,6 +175,43 @@
 					android:textColor="@color/black" />
 
 				<!-- TODO: Add the Radio button for the feedback -->
+				<RadioGroup
+					android:id="@+id/cube_reactions"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+
+					<RadioButton
+						android:id="@+id/very_unfair"
+						style="@style/custom_radio_button_style"
+						android:drawableLeft="@drawable/ic_very_unfair"
+						android:text="@string/very_unfair" />
+
+					<RadioButton
+						android:id="@+id/unfair"
+						style="@style/custom_radio_button_style"
+						android:drawableLeft="@drawable/ic_unfair"
+						android:text="@string/unfair" />
+
+					<RadioButton
+						android:id="@+id/not_sure"
+						style="@style/custom_radio_button_style"
+						android:drawableLeft="@drawable/ic_not_sure"
+						android:text="@string/not_sure" />
+
+					<RadioButton
+						android:id="@+id/fair"
+						style="@style/custom_radio_button_style"
+						android:drawableLeft="@drawable/ic_fair"
+						android:text="@string/fair" />
+
+					<RadioButton
+						android:id="@+id/very_fair"
+						style="@style/custom_radio_button_style"
+						android:drawableLeft="@drawable/ic_very_fair"
+						android:text="@string/very_fair" />
+				</RadioGroup>
+
+
 			</LinearLayout>
 
 		</LinearLayout>
@@ -139,15 +239,32 @@
 			android:layout_weight="1"
 			android:text="@string/back" />
 
-		<androidx.appcompat.widget.AppCompatButton
+		<RelativeLayout
 			android:layout_width="0dp"
 			android:layout_height="wrap_content"
-			android:id="@+id/submit_button"
-			style="@style/button"
-			android:enabled="false"
-			android:layout_marginStart="7dp"
 			android:layout_weight="2"
-			android:text="@string/submit_nomination" />
+			android:layout_marginStart="7dp"
+			>
+
+			<androidx.appcompat.widget.AppCompatButton
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/submit_button"
+				style="@style/button"
+				android:enabled="true"
+				android:layout_weight="2"
+				android:text="@string/submit_nomination" />
+			<ProgressBar
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/progressBar"
+				style="@style/progress_bar"
+				android:visibility="gone"
+				/>
+
+		</RelativeLayout>
+
+
 
 	</LinearLayout>
 </LinearLayout>

@@ -22,7 +22,12 @@ class NominationsRecyclerViewAdapter : ListAdapter<Nomination, NominationsRecycl
 			/**
 			 * TODO: This should show the nominee name instead of their id! Where can you get their name from?
 			 */
-			name.text = item.nomineeId
+
+			/*
+			* For the nominee name, I queried the local database from the nominee table using the nominee ID retrieved from the nomination table.
+			* I created a function named getAllNominationsWithNomineesName() in the repository for this purpose.
+			* */
+			name.text = item.nomineeName
 			reason.text = item.reason
 		}
 	}

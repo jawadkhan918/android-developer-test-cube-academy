@@ -55,6 +55,17 @@ dependencies {
 	implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 	implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
+	//Room
+	implementation("androidx.room:room-runtime:2.5.2")
+	implementation ("androidx.room:room-ktx:2.5.2")
+	annotationProcessor("androidx.room:room-compiler:2.5.2")
+	kapt ("androidx.room:room-compiler:2.5.2")
+
+	//serialization
+	implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
+
+
+
 	// Hilt
 	implementation("com.google.dagger:hilt-android:2.48")
 	kapt("com.google.dagger:hilt-compiler:2.48")
